@@ -95,7 +95,7 @@ public class Main {
             cmd = parser.parse(options, args);
         } catch (ParseException e) {
             HelpFormatter formatter = new HelpFormatter();
-            formatter.printHelp("mcbots", e.getMessage(), options, "\nhttps://github.com/crpmax/mc-bots",true);
+            formatter.printHelp("mcbots", e.getMessage(), options, "\nhttps://github.com/bluekyeet/mc-bots",true);
             System.exit(1);
         }
 

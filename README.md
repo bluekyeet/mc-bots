@@ -16,12 +16,12 @@ For older MC versions please look in the [releases](https://github.com/crpmax/mc
 
 ## 📖 Usage
 Minimal Java version: 21  
-Use of pre-compiled jar from [releases](https://github.com/crpmax/mc-bots/releases " releases"):  
+Use of pre-compiled jar from [releases](https://github.com/bluekyeet/mc-bots/releases " releases"):  
 `java -jar mc-bots.jar -s <server address> [arguments]`  
 When running, you can write a chat message to the terminal to send it by all bots.
 
 ## 🧪 Example
-`java -jar mc-bots-1.2.17.jar -s 192.168.0.189:25565 -p BOT_ -d 4000 5000 -c 30 -r`  
+`java -jar mc-bots-1.3.0.jar -s 192.168.0.189:25565 -p BOT_ -d 4000 5000 -c 30 -r`  
 This will connect 30 bots to server at 192.168.0.189:25565 with delay 4000-5000 ms and will use real-looking nicknames prefixed with BOT_
 
 Building from source (Java 21+):
