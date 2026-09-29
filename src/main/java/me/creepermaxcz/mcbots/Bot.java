@@ -90,7 +90,11 @@ public class Bot extends Thread {
                         lastY = p.getPosition().getY();
                         lastZ = p.getPosition().getZ();
 
-                        client.send(new ServerboundAcceptTeleportationPacket(p.getId()));
+                        client.send(new ServerboundAcceptTeleportationPacket(
+                                p.getId(),
+                                lastX, lastY, lastZ,
+                                p.getYRot(), p.getXRot()
+                        ));
                     }
                     else if (packet instanceof ClientboundPlayerCombatKillPacket){
                         if (Main.autoRespawnDelay >= 0) {
@@ -99,7 +103,7 @@ public class Bot extends Thread {
                                     new TimerTask() {
                                         @Override
                                         public void run() {
-                                            client.send(new ServerboundClientCommandPacket(ClientCommand.RESPAWN));
+                                            client.send(new ServerboundClientCommandPacket(ClientCommand.PERFORM_RESPAWN));
                                         }
                                     },
                                     Main.autoRespawnDelay

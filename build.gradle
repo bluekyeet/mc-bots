@@ -13,8 +13,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.geysermc.mcprotocollib:protocol:1.21.7-SNAPSHOT'
-    implementation 'net.kyori:adventure-text-serializer-gson:4.24.0'
+    implementation 'org.geysermc.mcprotocollib:protocol:26.3-SNAPSHOT'
+    implementation 'net.raphimc:MinecraftAuth:5.0.0'
+    implementation 'net.kyori:adventure-text-serializer-gson:5.2.0'
     implementation 'commons-cli:commons-cli:1.9.0'
     implementation 'com.diogonunes:JColor:5.5.1'
     implementation 'dnsjava:dnsjava:3.5.3'
@@ -24,8 +25,12 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(25)
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
 }
 
 jar {

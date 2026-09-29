@@ -152,7 +152,7 @@ public class Utils {
                     Component component = arg.asComponent();
                     if (component instanceof TranslatableComponent) {
                         placeholders.add(translate((TranslatableComponent) component));
-                    } else if (arg instanceof TextComponent) {
+                    } else if (component instanceof TextComponent) {
                         placeholders.add(getFullText((TextComponent) component, false));
                     }
                 }
